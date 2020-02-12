@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import fire from './config/Fire';
+//import fire from './config/Fire';
+import {  Link} from 'react-router-dom';
+//import Login from './Login';
+
+
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.logout = this.logout.bind(this);
-    }
-    logout() {
-        fire.auth().signOut();
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         return (
-            <div><h1>Welcome to Home</h1>
-            <button onClick={this.logout}>logaut</button>
-              
+            <div>
+                <h1>Welcome to Home</h1>
+            <button ><Link to="/login">Comenzar</Link></button>
+            
                 </div>
         );
 
