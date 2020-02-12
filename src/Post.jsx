@@ -1,30 +1,3 @@
-// import React, { Component } from 'react';
-// import fire from './config/Fire';
-
-// class Post extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.logout = this.logout.bind(this);
-//     }
-//     logout() {
-//         fire.auth().signOut();
-//     }
-
-//     render() {
-//         return (
-//             <div><h1>Welcome to Post</h1>
-//             <button onClick={this.logout}>Cerrar Sesión</button>
-              
-//                 </div>
-//         );
-
-//     }
-
-// }
-
-// export default Post;
-
-
 
 import React, {useState} from 'react';
 import fire from './config/Fire';
@@ -32,8 +5,8 @@ import fire from './config/Fire';
 
 function Post(){
 
-    let db = firebase.firestore();
-    let user = firebase.auth().currentUser;
+    let db = fire.firestore();
+    let user = fire.auth().currentUser;
    
 
     const [post, setPost] = useState('');

@@ -5,6 +5,7 @@ import fire from './config/Fire';
 import Home from './Home';
 import Post from './Post';
 import Login from './Login';
+import Wall from './Wall';
 
 
 
@@ -38,7 +39,7 @@ class App extends Component {
      <div>
        <Router>
       <Switch>
-        <Route exact path="/" component={ Home }/>
+      
         <Route path="/home" component={ Home } />
         {/* <Route path="/registerandlogin" component={ RegisterAndLogin }/> */}
         {/* <Route path="/register" component={ Register }/> */}
@@ -47,7 +48,7 @@ class App extends Component {
       </Switch>
     
    </Router>
-   {this.state.user ?  ( <Post/>) : (<Login />)}
+   {this.state.user ?  ( <Wall/>) : (<Login />)}
    </div>
       
     
