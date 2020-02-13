@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import fire from './config/Fire';
 import Post from './Post';
-import Walls from './Home';
+import EditAndDelatePost  from './EditAndDelatePost';
 
 
 class Wall extends Component {
@@ -20,7 +20,7 @@ class Wall extends Component {
     
                   
                     <Post/>
-                    <Walls/>
+                    <EditAndDelatePost/>
                     <button onClick={this.logout}>Cerrar Sesión</button>
                 </div>
         );

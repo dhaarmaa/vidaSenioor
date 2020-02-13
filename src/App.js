@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import fire from './config/Fire';
-import Home from './Home';
+//import EditAndDelatePost  from './EditAndDelatePost ';
 import Post from './Post';
 import Login from './Login';
 import Wall from './Wall';
@@ -40,7 +40,7 @@ class App extends Component {
        <Router>
       <Switch>
       
-        <Route path="/home" component={ Home } />
+        {/* <Route path="/home" component={ Home } /> */}
         {/* <Route path="/registerandlogin" component={ RegisterAndLogin }/> */}
         {/* <Route path="/register" component={ Register }/> */}
         <Route path="/post" component={ Post }/>

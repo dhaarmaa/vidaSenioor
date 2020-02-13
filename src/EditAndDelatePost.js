@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import fire from './config/Fire';
+import './style.css';
 
 let db = fire.firestore();
 let user = fire.auth().currentUser;
 console.log(user);
 
-class Walls extends Component {
+class EditAndDelatePost extends Component {
     constructor(props){
     super(props);
     this.state= {post:[], edit:'', newPost:''};
@@ -71,7 +72,7 @@ class Walls extends Component {
                         <div className="wall-post"> 
                             <div className="wall-text">nombre</div>
                             <div className="wall-input">
-                               { edit === el.id ? <input type="text"  className="wall-input-edit" value={newPost} onChange={this.handleNewPostChange}/> : <p>{el.data}</p>}
+                                { edit === el.id ? <textarea type="text"  className="wall-input-edit" value={newPost} onChange={this.handleNewPostChange}/> : <p>{el.data}</p>}
                             </div>
                         </div>
 
@@ -79,12 +80,12 @@ class Walls extends Component {
                             <div className="wall-heart">
                                 <i className="fas fa-heart"></i>
                             </div>
-                            <div className="wall-edit">
+                            {/* <div className="wall-edit">
                                 {edit === el.id ? <button onClick={()=>this.actionEdit(el.id)}>editar</button> : <button className="wall-edit-button" onClick={()=> this.editPost(el.id)}>editar</button>}
                             </div>
                             <div className="wall-remove">
                                 <button onClick={()=> this.deletePost(el.id)}>Eliminar</button>
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>   
@@ -95,4 +96,4 @@ class Walls extends Component {
     }
 }
 
-export default Walls;
+export default EditAndDelatePost ;

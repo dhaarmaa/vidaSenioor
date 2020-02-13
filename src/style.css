@@ -60,3 +60,15 @@ input{
 .option{
     font-size: 15px;
 }
+
+.wall-post{
+    border-radius: 10px;
+    background-color: rgb(167, 117, 117);
+    margin: 10px;
+    height: 100px;
+}
+
+.wall-input{
+    background-color: darksalmon;
+    margin: 10px;
+}

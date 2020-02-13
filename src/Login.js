@@ -47,22 +47,22 @@ class Login extends Component {
         <div className="col-md-6" id="container">
           <div ><h1>VidaSenioor</h1></div>
           <form>
-          <div class="form-group">
-              <label for="exampleInputName">Nombre o apodo</label>
-              <label for="exampleInputName" className="option">(solo es necesario para el registro)</label>
-              <input value={this.state.name} onChange={this.handleChange} type="name" name="name" class="input-name" placeholder="Ingrese su nombre o apodo" />
+          <div className="form-group">
+              <label htmlFor="exampleInputName">Nombre o apodo</label>
+              <label htmlFor="exampleInputName" className="option">(solo es necesario para el registro)</label>
+              <input value={this.state.name} onChange={this.handleChange} type="name" name="name" className="input-name" placeholder="Ingrese su nombre o apodo" />
             </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Correo</label>
-              <input value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su correo" />
+            <div className="form-group">
+              <label htmlFor="exampleInputEmail1">Correo</label>
+              <input value={this.state.email} onChange={this.handleChange} type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su correo" />
               {/* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> */}
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Contraseña</label>
-              <input value={this.state.password} onChange={this.handleChange} type="password" name="password" class="input-password" placeholder="Ingrese su contraseña" />
+            <div className="form-group">
+              <label htmlFor="exampleInputPassword1">Contraseña</label>
+              <input value={this.state.password} onChange={this.handleChange} type="password" name="password" className="input-password" placeholder="Ingrese su contraseña" />
             </div>
 
-              <button type="submit" onClick={this.login} class="btn btn-primary">Iniciar Sesión</button>
+              <button type="submit" onClick={this.login} className="btn btn-primary">Iniciar Sesión</button>
               <button onClick={this.signup}  className="btn btn-success">Registrarse</button>
             
           </form>
