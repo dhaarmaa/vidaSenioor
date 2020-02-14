@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import { Link } from 'react-router-dom';
 import fire from './config/Fire';
 //import Post from './Post';
+import logo from './img/logo.png';
 import './style.css';
 class Login extends Component {
   constructor(props) {
@@ -17,7 +18,6 @@ class Login extends Component {
     };
  
   }
-
 
 
   
@@ -42,10 +42,17 @@ class Login extends Component {
         console.log(error);
       })
   }
+
+ 
+
+
   render() {
     return (
         <div className="col-md-6" id="container">
+          <div className="headle">
+          <img src={logo} className="logo"/>
           <div ><h1>VidaSenioor</h1></div>
+          </div>
           <form>
           <div className="form-group">
               <label htmlFor="exampleInputName">Nombre o apodo</label>
@@ -63,7 +70,7 @@ class Login extends Component {
             </div>
 
               <button type="submit" onClick={this.login} className="btn btn-primary">Iniciar Sesión</button>
-              <button onClick={this.signup}  className="btn btn-success">Registrarse</button>
+              <button onClick={this.signup }  className="btn btn-success">Registrarse</button>
             
           </form>
         </div>

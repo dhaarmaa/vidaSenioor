@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import fire from './config/Fire';
 import Post from './Post';
 import EditAndDelatePost  from './EditAndDelatePost';
+import logo from './img/logo.png';
 
 
 class Wall extends Component {
@@ -13,14 +14,22 @@ class Wall extends Component {
         fire.auth().signOut();
     }
 
+   
+
     render() {
         return (
-            <div><h1>Welcome to Wall</h1>
+            <div>
+            <header>
+            <img src={logo} className="logo-wall"/>
+            <h1>VidaSenioor</h1>
+            </header>
+            <div className="home-text">Nombre de usuario</div> 
           
     
                   
                     <Post/>
                     <EditAndDelatePost/>
+                    
                     <button onClick={this.logout}>Cerrar Sesión</button>
                 </div>
         );

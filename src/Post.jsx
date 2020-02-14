@@ -42,7 +42,7 @@ function Post(){
                     <form className="home-form" onSubmit={handleSubmit}>
 
                         <div className="home-post"> 
-                            <div className="home-text">Nombre de usuario</div>
+                          
                             <textarea type="text" className="home-input" placeholder="¿Qué estás pensando?" value={post} onChange={handlePostChange}></textarea>
                         </div>
 

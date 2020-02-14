@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import fire from './config/Fire';
+import Like from './like';
 import './style.css';
 
 let db = fire.firestore();
@@ -55,6 +56,8 @@ class EditAndDelatePost extends Component {
             post:this.state.newPost
         })
     }
+ 
+
        
     render(){
         const{post}=this.state;
@@ -72,16 +75,24 @@ class EditAndDelatePost extends Component {
                         <div className="wall-post"> 
                             <div className="wall-text">nombre</div>
                             <div className="wall-input">
-                                { edit === el.id ? <textarea type="text"  className="wall-input-edit" value={newPost} onChange={this.handleNewPostChange}/> : <p>{el.data}</p>}
+                                { edit === el.id ? <textarea type="text"  className="wall-input-edit" value={newPost} onChange={this.handleNewPostChange}/> : <textarea className="wall-input-edit">{el.data}</textarea>}
+                            </div>
+                            <div className="btn-post">
+                            <div className="wall-edit">
+                                {edit === el.id ? <button onClick={()=>this.actionEdit(el.id)}><i className="fas fa-check"></i></button> : <button className="wall-edit-button" onClick={()=> this.editPost(el.id)}><i className="fas fa-edit"></i></button>}
+                            </div>
+                            <div className="wall-remove">
+                                <button onClick={()=> this.deletePost(el.id)}><i className="fas fa-trash-alt"></i></button>
+                            </div>
                             </div>
                         </div>
 
                         <div className="wall-body-button">
                             <div className="wall-heart">
-                                <i className="fas fa-heart"></i>
+                                <Like/>
                             </div>
                             {/* <div className="wall-edit">
-                                {edit === el.id ? <button onClick={()=>this.actionEdit(el.id)}>editar</button> : <button className="wall-edit-button" onClick={()=> this.editPost(el.id)}>editar</button>}
+                                {edit === el.id ? <button onClick={()=>this.actionEdit(el.id)}>listo</button> : <button className="wall-edit-button" onClick={()=> this.editPost(el.id)}>editar</button>}
                             </div>
                             <div className="wall-remove">
                                 <button onClick={()=> this.deletePost(el.id)}>Eliminar</button>
